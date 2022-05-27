@@ -44,12 +44,39 @@ public class RotateArrayInKSteps {
         return array;
     }
 
+    static int[] rotateElementInLeft(int[] array, int numberOfRotation) {
+        while (numberOfRotation > 0) {
+
+            int firstElement = array[0];
+            int[] shiftedArray = new int[array.length];
+
+            for (int i = 1; i < array.length; i++) {
+                shiftedArray[i - 1] = array[i];
+            }
+            shiftedArray[array.length - 1] = firstElement;
+            array = shiftedArray;
+            numberOfRotation--;
+        }
+        return array;
+    }
+
     public static void main(String[] args) {
 
         System.out.println(
                 Arrays.toString(
                         rotateArray(
                                 new int[]{1, 2, 3, 4, 5},
+                                2
+                        )
+                )
+        );
+
+        System.out.println("------------------------------");
+
+        System.out.println(
+                Arrays.toString(
+                        rotateElementInLeft(
+                                new int[] {1,2,3,4,5,6},
                                 2
                         )
                 )
