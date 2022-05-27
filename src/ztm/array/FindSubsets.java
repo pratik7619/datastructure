@@ -9,7 +9,8 @@ public class FindSubsets {
      * Find subsets of array elements
      *
      * array : [1,2]
-     *       subsets count = 2^n => 2^array.length => 2^2 => 4
+     *       subsets count = 2^n => 2^array.length => 2^2 => 4 or
+     *                     = 1 << array.length
      *       sebsets can be => {}, {1,2}, {1}, {2}
      * */
 
@@ -29,7 +30,27 @@ public class FindSubsets {
         getSubset(array, subset, 0);
     }
 
+    //without recursion
+    static void allSubsets(int[] array) {
+
+        int totalSubsets = 1 << array.length;
+
+        for (int i = 0; i < totalSubsets; i++) {
+
+            System.out.print("{");
+
+            for (int j = 0; j < array.length; j++) {
+                if ((i & (1 << j)) > 0) {
+                    System.out.print(array[j]);
+                }
+            }
+            System.out.print("}");
+        }
+    }
+
     public static void main(String[] args) {
         findSubsets(new int[]{1, 2});
+        System.out.println("----------------");
+        allSubsets(new int[]{1, 2});
     }
 }
