@@ -88,6 +88,24 @@ public class LinkedList<T> {
         length++;
     }
 
+    //! need to refactor
+    void removeAt(Integer data) {
+        int i = 0;
+        Node<T> currentNode = this.head;
+        Node<T> previous = null;
+
+        while (i < length) {
+            previous = currentNode;
+            currentNode = currentNode.next;
+            if(data == currentNode.data) {
+                previous.next = currentNode.next;
+                length--;
+                return;
+            }
+            i++;
+        }
+    }
+
     public static void main(String[] args) {
         LinkedList<Integer> list = new LinkedList<>(new Node<>(40));
         list.append(list.createNewNode(70));
@@ -99,6 +117,12 @@ public class LinkedList<T> {
         list.insert(3, list.createNewNode(33));
         list.insert(5000, list.createNewNode(500));
         list.insert(7, list.createNewNode(27));
+
+        list.removeAt(27);
+
+        list.removeAt(90);
+
+       // list.removeAt(55);
 
         System.out.println(list.print());
         System.out.println(list.size());
