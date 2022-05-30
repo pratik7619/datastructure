@@ -1,9 +1,6 @@
 package ztm.array;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
 
 public class RotateArrayInKSteps {
     //?Pratik Sherdiwala (Codelytics)
@@ -76,8 +73,8 @@ public class RotateArrayInKSteps {
         System.out.println(
                 Arrays.toString(
                         rotateElementInLeft(
-                                new int[] {1,2,3,4,5,6},
-                                2
+                                new int[]{1, 2, 3, 4, 5, 6},
+                                0
                         )
                 )
         );
