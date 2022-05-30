@@ -22,8 +22,8 @@ public class ArrayTwoMultiplication {
     }
 
     public static void main(String[] args) {
-
-        System.out.println(hasMultipliers(
+        System.out.println(
+                hasMultipliers(
                         new int[]{3, 4, 5, 6, 7},
                         52
                 )
