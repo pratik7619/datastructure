@@ -27,6 +27,7 @@ public class MergeSortedArray {
                 arrayItem2 = arrayTwo[j];
                 j++;
             }
+
             totalLength--;
         }
 

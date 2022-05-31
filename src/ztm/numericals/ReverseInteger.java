@@ -24,7 +24,7 @@ public class ReverseInteger {
 
         if (num < 0) {
             isNegative = true;
-            num = -(num);
+            num = Math.abs(num);
         }
 
         while (num != 0) {

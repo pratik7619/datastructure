@@ -41,7 +41,7 @@ public class FindElementInSortedAndRotatedArray {
             else if (comparedResult > 0)
                 return binarySearchString(stringArray, element, low, mid - 1);
 
-            binarySearchString(stringArray, element, mid + 1, high);
+            return binarySearchString(stringArray, element, mid + 1, high);
         }
         
         return -1;

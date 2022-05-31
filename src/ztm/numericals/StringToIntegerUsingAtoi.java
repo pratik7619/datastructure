@@ -1,5 +1,7 @@
 package ztm.numericals;
 
+import java.util.Arrays;
+
 public class StringToIntegerUsingAtoi {
     //?Pratik Sherdiwala (Codelytics)
 
@@ -13,7 +15,7 @@ public class StringToIntegerUsingAtoi {
         String[] convertedString = givenNumberInString
                 .trim()
                 .split(
-                        "[-+.^:,0]",
+                        "[-+.^:,]",
                         0
                 );
 
@@ -40,7 +42,7 @@ public class StringToIntegerUsingAtoi {
 
     public static void main(String[] args) {
         System.out.println(
-                convertStringIntoInteger("1234+987  9we")
+                convertStringIntoInteger("1234+987 0 9we")
         );
     }
 }

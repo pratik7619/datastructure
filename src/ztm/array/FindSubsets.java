@@ -51,6 +51,6 @@ public class FindSubsets {
     public static void main(String[] args) {
         findSubsets(new int[]{1, 2});
         System.out.println("----------------");
-        allSubsets(new int[]{1, 2});
+        //allSubsets(new int[]{1, 2});
     }
 }
