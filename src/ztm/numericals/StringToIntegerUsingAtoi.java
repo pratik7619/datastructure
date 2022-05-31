@@ -12,13 +12,16 @@ public class StringToIntegerUsingAtoi {
         //String givenNumberInString = "  1234+56";
         String[] convertedString = givenNumberInString
                 .trim()
-                .split("[-+.^:,0]", 0);
+                .split(
+                        "[-+.^:,0]",
+                        0
+                );
 
         int convertedNumber = 0;
-        String afterConvertingStringNumber = "";
+        StringBuilder afterConvertingStringNumber = new StringBuilder();
 
         for (String data : convertedString) {
-            afterConvertingStringNumber += data;
+            afterConvertingStringNumber.append(data);
         }
 
         for (int i = 0; i < afterConvertingStringNumber.length(); i++) {
