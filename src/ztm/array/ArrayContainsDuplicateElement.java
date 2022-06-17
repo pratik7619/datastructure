@@ -53,7 +53,6 @@ public class ArrayContainsDuplicateElement {
     }
 
     public static void main(String[] args) {
-
         System.out.println(
                 hasCommonElement2(
                         new int[]{1, 2, 3, 4, 5, 6, 1}

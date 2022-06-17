@@ -58,25 +58,19 @@ public class RotateArrayInKSteps {
     }
 
     public static void main(String[] args) {
-
-        System.out.println(
-                Arrays.toString(
-                        rotateArray(
-                                new int[]{1, 2, 3, 4, 5},
-                                2
-                        )
-                )
-        );
-
-        System.out.println("------------------------------");
-
         System.out.println(
                 Arrays.toString(
                         rotateElementInLeft(
                                 new int[]{1, 2, 3, 4, 5, 6},
-                                0
+                                3
                         )
                 )
         );
     }
 }
+/*
+* [4, 5, 6, 1, 2, 3]
+* */
+
+
+

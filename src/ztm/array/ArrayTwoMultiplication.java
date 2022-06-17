@@ -28,5 +28,12 @@ public class ArrayTwoMultiplication {
                         52
                 )
         );
+
+        System.out.println(
+                hasMultipliers(
+                        new int[]{3, 4, 5, 6, 7},
+                        30
+                )
+        );
     }
 }
