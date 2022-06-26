@@ -11,7 +11,7 @@ public class FindSubsets {
      * array : [1,2]
      *       subsets count = 2^n => 2^array.length => 2^2 => 4 or
      *                     = 1 << array.length
-     *       sebsets can be => {}, {1,2}, {1}, {2}
+     *       subsets can be => {}, {1,2}, {1}, {2}
      * */
 
     static void getSubset(int[] givenArray, Integer[] subset, int index) {
