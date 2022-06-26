@@ -1,7 +1,19 @@
 package google;
 
-
+import java.sql.Struct;
 import java.util.HashMap;
+import java.util.Stack;
+import java.util.concurrent.atomic.AtomicReference;
+
+class Message {
+    String message;
+    int timestamp;
+
+    Message(String message, int timestamp) {
+        this.message = message;
+        this.timestamp = timestamp;
+    }
+}
 
 public class MessageCommunication {
     //?Pratik Sherdiwala (Codelytics)
@@ -27,11 +39,7 @@ public class MessageCommunication {
      * timestamp -> 5
      * */
 
-    HashMap<Integer,String> hashMap = new HashMap<>();
+    HashMap<String, Integer> hashMap = new HashMap<>();
     //5 -> Winds are coming
 
-    public void onMessage(String message) {
-        String[] words = message.split(" ");
-        //5|Winds|are|coming|
-    }
 }

@@ -1,5 +1,7 @@
 package ztm.strings;
 
+import java.util.Arrays;
+
 public class EditDistance {
     //?Pratik Sherdiwala (Codelytics)
 
@@ -34,6 +36,12 @@ public class EditDistance {
             }
         }
 
+        for (int i = 0; i < distance.length; i++) {
+            for (int j = 1; j < distance.length; j++) {
+                System.out.print(distance[i][j]);
+            }
+            System.out.println();
+        }
         return distance[m][n];
     }
 
