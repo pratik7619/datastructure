@@ -434,13 +434,3 @@ Also, you will restrict yourself to those answers only. Try and learn more deepl
 * Design Bookmyshow.
 
 ### That’s all Guys. The moment I come out of the interview room, I always note down the questions on Google Keep. Blogs & Github links helped me so much in cracking these interviews. See Now I can help others too -:)
-
-If you learn about the concepts for the above questions, I am sure you will get your basics strong and with the strong basics, you can easily crack any interview.
-
-I have written an [article](https://blog.usejournal.com/interview-questions-for-android-java-ds-f5081cb3aa09) on the same.
-
-If you have more questions, I will be happy to learn, add & share. Please raise a [PR](https://github.com/niharika2810/android-interview-questions/compare) and contribute. :-)
-
-
-
-
