@@ -35,7 +35,8 @@ public class IntegerToRoman {
         return convertedNumber;
     }
 
-    static String repeat(String s, int n) {
+    /*
+     static String repeat(String s, int n) {
         if (s == null) return null;
 
         final StringBuilder builder = new StringBuilder();
@@ -43,6 +44,12 @@ public class IntegerToRoman {
             builder.append(s);
         }
         return builder.toString();
+     }
+    * */
+    static String repeat(String s, int n) {
+        if (s == null || s.isEmpty()) return null;
+
+        return s.repeat(Math.max(0, n));
     }
 
     public static void main(String[] args) {
