@@ -1,6 +1,6 @@
 # Android-Interview-Questions
 
-![interview](/images/interview.png)
+[comment]: <> (![interview]&#40;/images/interview.png&#41;)
 
 A repository containing interview questions on DS, Java &amp; Android based on my experiences.
 
@@ -84,6 +84,7 @@ Also, you will restrict yourself to those answers only. Try and learn more deepl
 ## Java
 
 * Interfaces vs Abstract Classes.Why Interfaces if abstract classes are already there.
+* -> 
 
 * JAVA 8 new features
 
@@ -101,7 +102,7 @@ Also, you will restrict yourself to those answers only. Try and learn more deepl
 
 * Programs based on Inheritance and multithreading. (Most Important)
 
-*  1.) Add(String string) 2.) Add (Object object), you called Add(null) what will be the output here?
+* 1.) Add(String string) 2.) Add (Object object), you called Add(null) what will be the output here?
 
 * Why main Static?
 

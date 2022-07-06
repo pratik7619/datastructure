@@ -8,7 +8,7 @@ public class LowestDistance {
     //?Pratik Sherdiwala (Codelytics)
     static List<Block> blocks = new ArrayList<>();
 
-    {
+    static {
         blocks.add(
                 new Block(
                         1,
@@ -65,37 +65,38 @@ public class LowestDistance {
     }
 
     //! need to solve
-    static boolean checkForPreviousAndNextBlock(Block currentBlock, Block nextBloc, Block previousBlock) {
-
-        if(nextBloc == null || previousBlock == null) return false;
-
-        boolean shouldNearFromOffice = false;
-        boolean shouldNearFromStore = false;
-        boolean shouldNearFromSchool = false;
-
-
-
-        return false;
+    static boolean checkForPreviousAndNextBlock(
+            Block currentBlock,
+            Block nextBloc,
+            Block previousBlock
+    ) {
+        if (nextBloc == null || previousBlock == null) return false;
+        return nextBloc.office && previousBlock.store;
     }
 
     public static void main(String[] args) {
 
-        HashMap<Block, Boolean> lowestDistanceAssumption = new HashMap<>();
+        HashMap<Integer, Boolean> lowestDistanceAssumption = new HashMap<>();
 
         for (int i = 0; i < blocks.size(); i++) {
-            Block currentBlock = blocks.get(i);
+            Block currentBlock = (i + 1 < blocks.size()) ? blocks.get(i + 1) : null;
             Block previousBlock = ((i - 1) < 0) ? null : blocks.get(i - 1);
-            Block nextBlock = ((i + 1) > blocks.size()) ? null : blocks.get(i + 1);
+            Block nextBlock = ((i + 2) > blocks.size()) ? null : blocks.get(i + 1);
 
-            lowestDistanceAssumption
-                    .put(
-                            currentBlock,
-                            checkForPreviousAndNextBlock(
-                                    currentBlock,
-                                    nextBlock,
-                                    previousBlock
-                            )
-                    );
+            assert nextBlock != null;
+
+            if (currentBlock != null) {
+                lowestDistanceAssumption
+                        .put(
+                                currentBlock.id,
+                                checkForPreviousAndNextBlock(
+                                        currentBlock,
+                                        nextBlock,
+                                        previousBlock
+                                )
+                        );
+            }
         }
+        System.out.println(lowestDistanceAssumption);
     }
 }

@@ -53,5 +53,19 @@ public class EditDistance {
                         "CREATES"
                 )
         );
+
+        double one = 70.0;
+        double two = 80.0;
+        double three = 50.0;
+
+        System.out.println(
+                Math.min(
+                        Math.min(
+                                one,
+                                two
+                        ),
+                        three
+                )
+        );
     }
 }
