@@ -1,7 +1,5 @@
 package ztm.strings;
 
-import java.util.Dictionary;
-import java.util.Hashtable;
 import java.util.LinkedHashMap;
 import java.util.Map;
 

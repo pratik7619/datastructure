@@ -36,9 +36,9 @@ public class EditDistance {
             }
         }
 
-        for (int i = 0; i < distance.length; i++) {
+        for (int[] ints : distance) {
             for (int j = 1; j < distance.length; j++) {
-                System.out.print(distance[i][j]);
+                System.out.print(ints[j]);
             }
             System.out.println();
         }

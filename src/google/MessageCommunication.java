@@ -40,9 +40,9 @@ public class MessageCommunication {
      *
      * -----------------------
      * 9 Winds are coming
-     * 8 I am good
      * 19 Winds are coming
-     *
+     * 12 I am good
+     * 30 I am good
      *
      * timestamp -> 5
      * */
@@ -57,6 +57,7 @@ public class MessageCommunication {
         }
 
         if (isMessageAvailable(message.message)) {
+
             Pair<Message, Integer> lastUpdatedMessageWithIndex = getLastUpdatedMessageWithIndex(message.message);
 
             if (lastUpdatedMessageWithIndex != null) {
@@ -73,7 +74,7 @@ public class MessageCommunication {
                             )
                     );
                 }
-                System.out.println(message.timestamp + " " + message.message);
+//                System.out.println(message.timestamp + " " + message.message);
             }
         } else {
             System.out.println(message.timestamp + " " + message.message);
@@ -115,9 +116,7 @@ public class MessageCommunication {
     }
 
     static void printMessageStack() {
-        stackMessages.forEach((key) -> {
-            System.out.println(key.timestamp + " " + key.message);
-        });
+        stackMessages.forEach((key) -> System.out.println(key.timestamp + " " + key.message));
     }
 
     public static void main(String[] args) {

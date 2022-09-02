@@ -3,6 +3,13 @@ import java.util.Arrays;
 public class ShiftZeroToLeftSideArray {
     //?Pratik Sherdiwala (Codelytics)
 
+    public static void main(String[] args) {
+        int[] v = new int[]{1, 10, 20, 0, 59, 63, 0, 88, 0};
+        System.out.println("Original Array: " + Arrays.toString(v));
+        moveZerosToLeft(v);
+        System.out.println("After Moving Zeroes to Left: " + Arrays.toString(v));
+    }
+
     static void moveZerosToLeft(int[] array) {
 
         if (array.length < 1) return;
@@ -22,15 +29,5 @@ public class ShiftZeroToLeftSideArray {
             array[writeIndex] = 0;
             writeIndex--;
         }
-    }
-
-    public static void main(String[] args) {
-
-        int[] v = new int[]{1, 10, 20, 0, 59, 63, 0, 88, 0};
-        System.out.println("Original Array: " + Arrays.toString(v));
-
-        moveZerosToLeft(v);
-
-        System.out.println("After Moving Zeroes to Left: " + Arrays.toString(v));
     }
 }
