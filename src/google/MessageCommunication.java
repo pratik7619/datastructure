@@ -58,7 +58,7 @@ public class MessageCommunication {
 
         if (isMessageAvailable(message.message)) {
 
-            Pair<Message, Integer> lastUpdatedMessageWithIndex = getLastUpdatedMessageWithIndex(message.message);
+            Pair<Message, Integer> lastUpdatedMessageWithIndex = getLastUpdatedMessageWithPosition(message.message);
 
             if (lastUpdatedMessageWithIndex != null) {
 
@@ -97,7 +97,7 @@ public class MessageCommunication {
         }
     }
 
-    static Pair<Message, Integer> getLastUpdatedMessageWithIndex(String message) {
+    static Pair<Message, Integer> getLastUpdatedMessageWithPosition(String message) {
         for (int i = stackMessages.size() - 1; i >= 0; i--) {
             if (stackMessages.get(i).message.equals(message)) {
                 return new Pair<>(stackMessages.get(i), i);

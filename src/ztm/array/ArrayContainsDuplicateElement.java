@@ -25,18 +25,46 @@ public class ArrayContainsDuplicateElement {
 
     //Brute-Force
     /*
-    * Time Complexity = O(n^2)
-    * */
-//    static boolean hasCommonElement(int[] array) {
-//        for (int i = 0; i < array.length; i++) {
-//            for (int j = i + 1; j < array.length; j++) {
-//                if (array[i] == array[j]) {
-//                    return true;
-//                }
-//            }
-//        }
-//        return false;
-//    }
+     * Time Complexity = O(n^2)
+     * */
+    static boolean hasCommonElementUsingBruteForce(int[] array) {
+        //500000
+        for (int i = 0; i < array.length; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i] == array[j]) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    static boolean hasAdditionFound(int[] array, int target) {
+
+        /*
+            // data => 2, 5, 1
+
+         * target = 10
+         * [2,5,1,8,9]
+         *
+         * 10 - 8 = 2
+         * */
+
+        Set<Integer> set = new HashSet<>();
+
+        for (int num : array) {
+
+            int compliment = target - num;
+
+            if (set.contains(compliment)) {
+                return true;
+            } else {
+                set.add(num);
+            }
+        }
+
+        return false;
+    }
 
     //Time Complexity => O(n)
     static boolean hasCommonElement(int[] array) {
@@ -53,8 +81,9 @@ public class ArrayContainsDuplicateElement {
 
     public static void main(String[] args) {
         System.out.println(
-                hasCommonElement(
-                        new int[]{1, 2, 3, 4, 5, 6, 1}
+                hasAdditionFound(
+                        new int[]{1, 2, 3, 4, 5, 6, 1},
+                        11
                 )
         );
     }
