@@ -2,24 +2,19 @@ package ztm.array;
 
 public class FindElementInSortedAndRotatedArray {
     //?Pratik Sherdiwala (Codelytics)
-
     static int binarySearch(int[] array, int element, int low, int high) {
 
         if (high >= low) {
             int mid = low + (high - low) / 2;
-
-            // If found at mid, then return it
+            //? If found at mid, then return it
             if (array[mid] == element)
                 return mid;
-
-            // Search the left half
+            //! Search the left half
             if (array[mid] > element)
                 return binarySearch(array, element, low, mid - 1);
-
-            // Search the right half
+            //# Search the right half
             return binarySearch(array, element, mid + 1, high);
         }
-
         return -1;
     }
 

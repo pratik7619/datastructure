@@ -7,7 +7,7 @@ public class IntegerToRoman {
     //?Pratik Sherdiwala (Codelytics)
 
     static String convertIntoRoman(int number) {
-        String convertedNumber = "";
+        StringBuilder convertedNumber = new StringBuilder();
 
         LinkedHashMap<String, Integer> dictionary = new LinkedHashMap<>();
         dictionary.put("M", 1000);
@@ -26,11 +26,11 @@ public class IntegerToRoman {
 
         for (Map.Entry<String, Integer> entry : dictionary.entrySet()) {
             int matches = number / entry.getValue();
-            convertedNumber += repeat(entry.getKey(), matches);
+            convertedNumber.append(repeat(entry.getKey(), matches));
             number = number % entry.getValue();
         }
 
-        return convertedNumber;
+        return convertedNumber.toString();
     }
 
     /*
@@ -43,7 +43,7 @@ public class IntegerToRoman {
         }
         return builder.toString();
      }
-    * */
+    */
     static String repeat(String s, int n) {
         if (s == null || s.isEmpty()) return null;
 

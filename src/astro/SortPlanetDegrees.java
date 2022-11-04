@@ -23,7 +23,9 @@ public class SortPlanetDegrees {
     double moonDegree = 13.1637;
     double sunDegree = 11.4019;
 
-    SortPlanetDegrees() {}
+    SortPlanetDegrees() {
+
+    }
 
     SortPlanetDegrees(
             double marsDegree,
@@ -108,6 +110,7 @@ public class SortPlanetDegrees {
         );
 
         HashMap<Double, String> map = new SortPlanetDegrees().sortPlanetDegrees();
+        //HashMap<Double, String> map = deepakDegree.sortPlanetDegrees();
 
         AtomicInteger count = new AtomicInteger();
         count.set(6);

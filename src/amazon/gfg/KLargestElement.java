@@ -1,6 +1,5 @@
 package amazon.gfg;
 
-import java.util.Collections;
 import java.util.PriorityQueue;
 
 public class KLargestElement {
@@ -14,14 +13,18 @@ public class KLargestElement {
             priorityQueue.add(array[i]);
         }
 
+        Integer lastValue = priorityQueue.peek();
+
         for (int i = k; i < array.length; i++) {
-            if (priorityQueue.peek() < array[i]) {
-                priorityQueue.poll();
-                priorityQueue.add(array[i]);
+            if (lastValue != null) {
+                if (lastValue < array[i]) {
+                    priorityQueue.poll();
+                    priorityQueue.add(array[i]);
+                }
             }
         }
 
-        return priorityQueue.peek();
+        return lastValue == null ? 0 : lastValue;
     }
 
     public static void main(String[] args) {
